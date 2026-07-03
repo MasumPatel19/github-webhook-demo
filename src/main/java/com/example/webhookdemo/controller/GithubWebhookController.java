@@ -13,7 +13,7 @@ public class GithubWebhookController {
             @RequestHeader("X-GitHub-Event") String event) {
 
         System.out.println("=========================");
-        System.out.println("Webhook received");
+        System.out.println("Webhook received from the Github");
         System.out.println("Event : " + event);
         System.out.println(payload);
         System.out.println("=========================");
