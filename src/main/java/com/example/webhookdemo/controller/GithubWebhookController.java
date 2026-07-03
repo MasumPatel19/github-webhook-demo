@@ -8,15 +8,17 @@ import org.springframework.web.bind.annotation.*;
 public class GithubWebhookController {
 
     @PostMapping("/github")
-    public ResponseEntity<String> receiveWebhook(
+    public ResponseEntity<String> githubWebhook(
             @RequestBody String payload,
             @RequestHeader("X-GitHub-Event") String event) {
 
-        System.out.println("Event = " + event);
-
+        System.out.println("=========================");
+        System.out.println("Webhook received from the Github");
+        System.out.println("Event : " + event);
         System.out.println(payload);
+        System.out.println("=========================");
 
-        return ResponseEntity.ok("Received");
+        return ResponseEntity.ok("OK");
     }
 
 }
